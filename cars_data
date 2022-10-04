@@ -1,7 +1,25 @@
-https://console.cloud.google.com/bigquery?sq=177617639958:85a78f3d77bf4b8691f321a024d3634e
+/* Our stakeholder decided they wanted to buy a car but only wants a gas powered car and only has $15k to spend. */
+
 
 # querying the Gas powered vehicles in alphabetical order
 
 select *
 from `involuted-alpha-356703.cars.car_info`
 where fuel_type = "gas" order by make
+
+/* Writing a multi statement query */ 
+
+select *
+from `involuted-alpha-356703.cars.car_info`
+where fuel_type = "gas" 
+  and price < 15001 
+  order by make
+
+
+/* (Attempted) Creating a temp table */ 
+create table gas_cars (
+  make int,
+  fuel_type char,
+  price int
+)
+
