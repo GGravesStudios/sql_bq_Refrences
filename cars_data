@@ -1,0 +1,7 @@
+https://console.cloud.google.com/bigquery?sq=177617639958:85a78f3d77bf4b8691f321a024d3634e
+
+# querying the Gas powered vehicles in alphabetical order
+
+select *
+from `involuted-alpha-356703.cars.car_info`
+where fuel_type = "gas" order by make
