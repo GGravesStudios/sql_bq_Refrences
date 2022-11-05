@@ -1,0 +1,11 @@
+What movies in this data set broke even or made a profit?
+
+SELECT *
+FROM `involuted-alpha-356703.movie_data.movie_data` 
+WHERE Revenue >= Budget_ order by Revenue desc
+
+What was the top revenue generating Genre?
+
+SELECT Genre
+FROM `involuted-alpha-356703.movie_data.movie_data` 
+WHERE Revenue >= Budget_ order by Revenue desc
